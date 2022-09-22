@@ -1,0 +1,538 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Focal T&C</title>
+    <meta name="author" content="Xmartlabs" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />/ -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- <link href="css/custom.css" rel="stylesheet" type="text/css" /> -->
+    <style>
+        @font-face {
+            font-family: Aller;
+            src: url("../fonts/aller/aller_bd.eot");
+            /* IE9 Compat Modes */
+            src: url("../fonts/aller/aller_bd.eot?#iefix") format("embedded-opentype"), url("../fonts/aller/aller_bd.woff") format("woff"), url("../fonts/aller/aller_bd.ttf") format("truetype"), url("../fonts/aller/aller_bd.svg#svgFontName") format("svg");
+            /* Legacy iOS */
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .header-gradient,
+        .header {
+            background: #4a90e2;
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #4a90e2, #d56fa1);
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #4a90e2, #d56fa1);
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #4a90e2, #d56fa1);
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #4a90e2, #d56fa1);
+            /* Standard syntax */
+        }
+
+        .header {
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        .header .logo {
+            margin: 40px 0;
+        }
+
+        .header .title {
+            margin-top: 0;
+            font-family: Lato;
+            font-weight: lighter;
+            font-style: italic;
+            color: white;
+        }
+
+        .header .subtitle {
+            font-family: Lato;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header .store-button {
+            max-width: 45%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .header .logo {
+                margin-top: 80px;
+            }
+        }
+
+        .footer-gradient,
+        .footer {
+            background: #4a90e2;
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#4a90e2, #6e7fd8);
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#4a90e2, #6e7fd8);
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#4a90e2, #6e7fd8);
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#4a90e2, #6e7fd8);
+            /* Standard syntax */
+        }
+
+        .footer {
+            padding: 40px 10px;
+        }
+
+        .footer .footer-logo-container img {
+            margin-bottom: 30px;
+        }
+
+        .footer .title {
+            color: white;
+            font-family: Lato;
+            font-style: italic;
+            font-weight: lighter;
+        }
+
+        .footer .link-container .links {
+            color: white;
+            font-family: Lato;
+            font-size: 20px;
+        }
+
+        .footer .link-container .links.transparent {
+            opacity: 0.6;
+        }
+
+        .footer .copyright {
+            margin-top: 20px;
+            color: white;
+            font-family: Lato;
+            font-size: 15px;
+            opacity: 0.6;
+        }
+
+        .footer .copyright:last-child {
+            margin-top: 0;
+        }
+
+        @media (max-width: 767px) {
+            .footer {
+                border-radius: 0;
+            }
+        }
+
+        #terms-and-conditions .terms-and-conditions-section {
+            margin: 10px 0;
+        }
+
+        #terms-and-conditions .terms-and-conditions-section.grey {
+            background-color: #f8f8fb;
+        }
+
+        #terms-and-conditions .terms-and-conditions-section .section-title {
+            color: #979797;
+        }
+
+        #about .about-section {
+            margin: 10px 0;
+        }
+
+        #about .about-section.grey {
+            background-color: #f8f8fb;
+        }
+
+        #about .text-section {
+            margin-top: 30px;
+            margin-bottom: 100px;
+        }
+
+        .how-to-section {
+            margin: 10px 0;
+            padding: 20px 0;
+        }
+
+        .how-to-section.grey {
+            background-color: #f8f8fb;
+        }
+
+        .text-wrapper {
+            height: 400px;
+            position: relative;
+        }
+
+        .text-wrapper .section-text {
+            position: absolute;
+            top: 40%;
+            height: 100px;
+            margin-top: -50px;
+        }
+
+        .title {
+            font-family: Lato;
+            font-weight: 100;
+            font-style: italic;
+            color: #979797;
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            font-family: Aller;
+            font-weight: bold;
+            color: #6e7fd8;
+        }
+
+        .subtext {
+            font-family: Lato;
+            font-size: 18px;
+            color: #919191;
+        }
+
+        .how-to-image {
+            height: 400px;
+            max-width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            .text-wrapper {
+                height: auto;
+                position: static;
+            }
+
+            .text-wrapper .section-text {
+                position: static;
+                height: auto;
+                margin-top: 0;
+            }
+
+            .how-to-image {
+                height: 200px;
+            }
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body id="terms-and-conditions">
+    <div class="container-fluid">
+        <div class="row terms-and-conditions-section">
+            <div class="col-xs-12 text-center">
+                <h1 class="title">Focal</h1>
+            </div>
+
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                <div class="content">
+                    <!-- <h2 class="section-title" style="color: #979797;">1. Privacy Policy</h2>
+                    <p>
+                        At FLOCAL, your privacy is a top priority. Your privacy is at the core of how we design and
+                        build the
+                        services and
+                        products you know so that you can fully trust them and focus on building meaningful connections.
+                    </p>
+                    <p>
+                        We appreciate that you put your trust in us when you provide us with your information and we do
+                        not take
+                        this lightly.
+                        Our commitment to privacy. We design all of our products and services with your privacy in mind.
+                        We involve
+                        experts from
+                        various fields, including legal, security, engineering, product design, and others to make sure
+                        that our
+                        decisions are
+                        taken with the utmost respect for your privacy.
+                    </p>
+                    <p>
+                        Our commitment to transparency. Because we use many of the same online services you do, we know
+                        that
+                        insufficient
+                        information and overly complicated language are common issues in privacy policies. We take the
+                        exact
+                        opposite approach:
+                        we’re doing our best to write our Privacy Policy and related documents in plain language. We
+                        actually want
+                        you to read
+                        our policies and understand our privacy practices!
+                    </p>
+                    <p>
+                        Our commitment to security. We have teams dedicated to keeping your data safe and secure. We
+                        constantly
+                        update our
+                        security practices and invest in our security efforts to enhance the safety of your information.
+                    </p>
+                    <p>
+                        For more information
+                        <a href="">https://www.gotinder.com/privacy</a>
+                    </p> -->
+                    <!-- 
+                    <h2 class="section-title" style="color: #979797;">2. Terms & Conditions</h2>
+                    <p>By creating a FLOCAL account, whether through a mobile device or mobile application, you agree to
+                        be bound
+                        by our
+                        Privacy Policy, each of which is incorporated by reference into this Agreement, and any terms
+                        disclosed and
+                        agreed to by
+                        you if you purchase additional features, products or services we offer on the Service
+                        (collectively, this
+                        "Agreement").
+                        If you do not accept and agree to be bound by all of the terms of this Agreement, please do not
+                        use the
+                        Service.</p>
+                    <p>We may change this Agreement and the Service from time to time. We may do this for a variety of
+                        reasons
+                        including to
+                        reflect changes in or requirements of the law, new features, or changes in business practices.
+                        The most
+                        recent version
+                        of this Agreement will be posted on the Service under, and you should regularly check for the
+                        most recent
+                        version. The
+                        most recent version is the version that applies. If the changes include material changes to your
+                        rights or
+                        obligations,
+                        we will notify you at least 30 days in advance of the changes (unless we’re unable to do so
+                        under applicable
+                        law) by
+                        reasonable means, which could include notification through the Service or via email. If you
+                        continue to use
+                        the Service
+                        after the changes become effective, then you agree to the revised Agreement.</p>
+                    <p>In order to use FLOCAL, you may sign in using your mobile number and Email ID.
+                        You are responsible for maintaining the confidentiality of the login credentials you use to sign
+                        up for
+                        FLOCAL, and you
+                        are solely responsible for all activities that occur under those credentials. If you think
+                        someone has
+                        gained access to
+                        your account, please immediately contact us</p>
+                    <p>Though FLOCAL strives to encourage a respectful member experience through features like the
+                        double opt-in
+                        that allows
+                        members to communicate only after they have both indicated interest in one another, flocal is
+                        not
+                        responsible for the
+                        conduct of any member on or off of the Service. You agree to use caution in all interactions
+                        with other
+                        members,
+                        particularly if you decide to communicate off the Service or meet in person. In addition, you
+                        agree to
+                        review and follow
+                        FLOCAL’s Safety Tips prior to using the Service. You agree that you will not provide your
+                        financial
+                        information (for
+                        example, your credit card or bank account information), or wire or send money to other members.
+                    </p>
+                    <p>YOU ARE SOLELY RESPONSIBLE FOR YOUR INTERACTIONS WITH OTHER MEMBERS. YOU UNDERSTAND THAT FLOCAL
+                        DOES NOT
+                        CONDUCT
+                        CRIMINAL BACKGROUND CHECKS ON ITS MEMBERS OR OTHERWISE INQUIRE INTO THE BACKGROUND OF ITS
+                        MEMBERS. FLOCAL
+                        MAKES NO
+                        REPRESENTATIONS OR WARRANTIES AS TO THE CONDUCT OR COMPATIBILITY OF MEMBERS.</p>
+                    <p>Although FLOCAL reserves the right to review and remove Content that violates this Agreement,
+                        such Content
+                        is the sole
+                        responsibility of the member who posts it, and FLOCAL cannot guarantee that all Content will
+                        comply with
+                        this Agreement.
+                        If you see Content on the Service that violates this Agreement, please report it within the
+                        Service or via
+                        our contact
+                        form.</p>
+                    <p>
+                        For more information
+                        <a href="">https://www.gotinder.com/terms</a>
+                    </p> -->
+
+                    <h2 class="section-title" style="color: #979797;">3. Contact Us</h2>
+                    <ul>
+                        <li>Phone Number: 09033975375</li>
+                        <li>E-mail Address: <a href="">career@yudiz.com</a></li>
+                        <li>Address: 13th Floor, BSquare 2, Iscon-Ambli Road, Vikram Nagar, Ahmedabad, Gujarat - 380054
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Message</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Message">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                    <!--   <h2 class="section-title" style="color: #979797;">4. FAQs</h2>
+                    <button class="accordion">Can we block/report other users/posts?</button>
+                    <div class="panel">
+                        <p>
+                            - Yes, Navigate to the user's profile, at the top right corner you can see the options to
+                            Block or Report
+                            User
+                            - From there you can block the user
+                            - And by clicking the top right corner of the post you can report a particular post.
+
+                        </p>
+                    </div>
+                    <button class="accordion">Can we chat with our friends?</button>
+                    <div class="panel">
+                        <p>
+                            - Yes, You can send a request to your friends and after accepting the request you can chat
+                            with them.
+                        </p>
+                    </div>
+                    <button class="accordion">Can we add a story?</button>
+                    <div class="panel">
+                        <p>
+                            - No, We can add it in the future.
+                        </p>
+                    </div>
+                    <button class="accordion">Can we turn on or off our notification?</button>
+                    <div class="panel">
+                        <p>
+                            - Yes, You can handle notification access.
+                        </p>
+                    </div>
+                    <button class="accordion">Why do people use FLOCAL?</button>
+                    <div class="panel">
+                        <p> - FLOCAL apps are meant to supplement the way you meet people offline, in person.</p>
+                    </div>
+                    <button class="accordion">How much does FLOCAL cost?</button>
+                    <div class="panel">
+                        <p>
+                            - No, We cannot charge a single penny for any service.
+                        </p>
+                    </div>
+                    <button class="accordion">Can we search our friends' nearby locations?</button>
+                    <div class="panel">
+                        <p>
+                            - Yes, you can set a ratio of kilometers so you can find your friends around that distance.
+                        </p>
+                    </div>
+                    <button class="accordion">How do we search for the spotlight option?</button>
+                    <div class="panel">
+                        - Comming soon
+                    </div>
+                    <h2 class="section-title" style="color: #979797;">5. About Us</h2>
+                    <p>
+                    <ul>
+                        <li>FLOCAL is a combination of Feel + Local.</li>
+                        <li>FLOCAL is a mobile application based on the concept of finding your native friends.</li>
+                        <li>The app allows users to find their native fellow, and chat with them.</li>
+                        <li>FLOCAL is for people who come to tier 1/tier 2 cities for many purposes. The purpose can be
+                            education,
+                            employment, etc.</li>
+                        <li>It takes time to get comfortable in a new city.</li>
+                        <li>They always feel like an outsider.</li>
+                        <li> The first problem they feel in a new city is communication.</li>
+                        <li>Even if they know English, they are frustrated about speaking English and want to find
+                            people with whom
+                            they can speak
+                            their own local language.
+                            But now the question is how they find people who are from the same hometown but are living
+                            here in a
+                            different city for
+                            whatever reason.</li>
+                        <li>So by using FLOCAL, people can find out about their region's people.
+                            With whom they can speak in their own language and also visit some places together.</li>
+                        <li>They can share their opinions on the restaurant they find, a place they visit, or organize a
+                            get-together. They can chat
+                            in groups or as individuals. Thus, people feel local even if they are not! With whom they
+                            can speak in
+                            their native
+                            language and also visit some places together. They can share their opinions on the
+                            restaurant they find, a
+                            place they
+                            visit, or organize a get-together. They can chat in groups or as individuals. This is how
+                            you feel local,
+                            even if you're
+                            not local.</li>
+                        <li>They also send requests to their friends and will be able to view or like their posts and
+                            also chat with
+                            them.</li>
+                    </ul>
+                    </p> -->
+                    <!-- Future Enhancement
+          Revenue Model
+          - We will provide subscription services.
+          - We will provide users to register and use the app for free, but includes in-app purchases and third-party ads.
+          - FLOCAL apps can make extra profits by integrating third-party ads, either by partnering with clients directly or by
+          using the service offered by websites.
+          Group Chat
+          We provide group chatting and video calls.
+          Sponsored content.
+          The FLOCAL app owners can generate additional revenue by letting clients promote their services through the app.
+          Subscription plans.
+          You can introduce subscription plans for users to use all the features of the app - an added advantage over free
+          members. Premium users can be benefitted from features like unlimited likes, read receipts, ad-free apps, more filtering
+          options, review profiles, etc.
+          Security
+          We hide our Active Status, last seen, etc.
+          Competitors
+          HelloTalk
+          HiNative
+          Meetup
+          Speaky
+          Instagram
+          Market Acceptance -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
